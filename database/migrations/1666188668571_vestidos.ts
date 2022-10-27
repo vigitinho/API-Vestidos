@@ -9,7 +9,7 @@ export default class extends BaseSchema {
       table.string('title')
       table.string('description')
       table.string('color')
-      table.integer('valor')
+      table.integer('value')
       table.string('style')
       table.string('image')
 

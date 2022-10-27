@@ -19,7 +19,7 @@ export default class Vestido extends BaseModel {
   public color: string
 
   @column()
-  public valor: number
+  public value: number
 
   @column()
   public style: string

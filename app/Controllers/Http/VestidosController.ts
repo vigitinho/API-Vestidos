@@ -74,7 +74,7 @@ export default class VestidosController {
     vestido.title = body.title
     vestido.description = body.description
     vestido.color = body.color
-    vestido.valor = body.valor
+    vestido.value = body.valor
     vestido.style = body.style
 
     if (vestido.image !== body.image || !vestido.image) {
