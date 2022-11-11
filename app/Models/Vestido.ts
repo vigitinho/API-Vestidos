@@ -2,6 +2,7 @@ import { DateTime } from 'luxon'
 import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import Comment from './Comment'
 
+/*Representação da tabela de Vestidos no Banco de dados*/
 export default class Vestido extends BaseModel {
   @hasMany(() => Comment)
   public comments: HasMany<typeof Comment>

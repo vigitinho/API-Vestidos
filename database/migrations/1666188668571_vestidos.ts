@@ -1,5 +1,6 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
+/*  Reflete o model em tabelas no Banco de dados */
 export default class extends BaseSchema {
   protected tableName = 'vestidos'
 

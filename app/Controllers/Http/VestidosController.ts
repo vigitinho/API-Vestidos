@@ -6,12 +6,14 @@ import Vestido from 'App/Models/Vestido'
 
 import Application from '@ioc:Adonis/Core/Application'
 
+/* Rotas da API */
 export default class VestidosController {
   private validationOptions = {
     type: ['image'],
     size: '2mb',
   }
 
+  /* Ação de inserção de um registro no sistema  */
   public async store({ request, response }: HttpContextContract) {
     const body = request.body()
 
@@ -37,6 +39,7 @@ export default class VestidosController {
     }
   }
 
+  /* Ação de pegar todos os registros do sistema  */
   public async index() {
     const vestidos = await Vestido.query().preload('comments')
 
@@ -45,6 +48,7 @@ export default class VestidosController {
     }
   }
 
+  /* Ação de pegar um registros do sistema  */
   public async show({ params }: HttpContextContract) {
     const vestido = await Vestido.findOrFail(params.id)
 
@@ -55,6 +59,7 @@ export default class VestidosController {
     }
   }
 
+  /* Ação de deletar um registros do sistema  */
   public async destroy({ params }: HttpContextContract) {
     const vestido = await Vestido.findOrFail(params.id)
 
@@ -66,6 +71,7 @@ export default class VestidosController {
     }
   }
 
+  /* Ação de atualizar um  registros do sistema  */
   public async update({ params, request }: HttpContextContract) {
     const body = request.body()
 
